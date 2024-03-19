@@ -20,7 +20,7 @@ deployment:
   container:
     image:
       repository: "harbor.sme-long-running.a1ck.io/demo/hello-ck8s"
-      tag: v1
+      tag: 1.10
       pullPolicy: IfNotPresent
     port: 8080
 
