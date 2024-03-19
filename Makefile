@@ -1,4 +1,4 @@
-REGISTRY ?= harbor.long-running.dev-ck8s.com
+REGISTRY ?= harbor.sme-long-running.a1ck.io
 REPOSITORY ?= demo
 IMAGE_VERSION ?= $(shell cat src/app/package.json | jq -r .version)
 IMAGE_MAJOR_VERSION = $(shell echo "$(IMAGE_VERSION)" | cut -d '.' -f1 )

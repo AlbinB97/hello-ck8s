@@ -2,13 +2,13 @@
 # Remember to set service.type=ClusterIP if you are using an ingress
 ingress:
   enabled: true
-  hostname: demo.pavgun-dev2.dev-ck8s.com
+  hostname: demo.sme-long-running.a1ck.io
   tls: true
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod
 
 # Provide a custom message
-message: test-this-is-from-git
+message: testing-with-vals
 
 
 service:
@@ -19,7 +19,7 @@ deployment:
   replicaCount: 3
   container:
     image:
-      repository: "harbor.long-running.dev-ck8s.com/pavan/hello-ck8s"
+      repository: "harbor.sme-long-running.a1ck.io/demo/hello-ck8s"
       tag: v1
       pullPolicy: IfNotPresent
     port: 8080
@@ -29,7 +29,13 @@ deployment:
     kubernetes.io/os: linux
     kubernetes.io/arch: amd64
 
-  resources: {}
+  resources:
+    requests:
+      memory: 32Mi
+      cpu: 50m
+    limits:
+      memory: 64Mi
+      cpu: 100m
 
   tolerations: []
 
