@@ -8,7 +8,7 @@ ingress:
     cert-manager.io/cluster-issuer: letsencrypt-prod
 
 # Provide a custom message
-# message: custom-msg
+message: custom-msg
 
 
 service:
