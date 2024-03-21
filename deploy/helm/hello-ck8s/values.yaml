@@ -8,7 +8,7 @@ ingress:
     cert-manager.io/cluster-issuer: letsencrypt-prod
 
 # Provide a custom message
-message: testing-with-vals
+# message: testing-with-vals
 
 
 service:
