@@ -14,9 +14,6 @@ spec:
     helm:
       valueFiles:
       - values.yaml
-      fileParameters:
-        - name: message
-          path: secrets+literal://vals!ref+vault://secret/test?proto=http#/message
     path: deploy/helm/hello-ck8s
     repoURL: https://github.com/AlbinB97/hello-ck8s.git
     targetRevision: HEAD
