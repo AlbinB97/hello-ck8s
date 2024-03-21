@@ -7,7 +7,7 @@ metadata:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: staging #adjust the values as needed
+    namespace: staging
     server: https://kubernetes.default.svc
   project: default
   source:
@@ -16,7 +16,7 @@ spec:
       - values.yaml
       fileParameters:
         - name: message
-          path: secrets+literal://vals!ref+vault://secret/test?proto=http#/message
+          path: secrets+literal://vals!ref+vault://secret/test/#/message
     path: deploy/helm/hello-ck8s
     repoURL: https://github.com/AlbinB97/hello-ck8s.git
     targetRevision: HEAD
